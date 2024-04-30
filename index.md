@@ -3,77 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Max Zargha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Galerie de Max Zargha</title>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        header {
-            background: #ffffff;
-            padding: 10px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Style pour l'image d'en-tête */
         .header-image {
-            width: 150px; /* Adjusted image size for a better fit */
-            height: auto;
-            margin: 0 auto; /* Centering the image horizontally */
+            display: block;
+            margin: 0 auto; /* Centre l'image horizontalement */
+            max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
+            height: auto; /* Maintient le ratio de l'image */
+            width: 100%; /* Utilise 100% de la largeur de l'écran */
         }
 
-        .content {
-            padding: 20px;
-            text-align: center;
+        /* Styles pour le carrousel */
+        .carousel {
+            width: 60%;
+            overflow: hidden;
+            margin: 50px auto;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        .content h1 {
-            color: #2c3e50;
-        }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .gallery {
+        .carousel-container {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px;
+            transition: transform 1s ease;
+            cursor: pointer; /* Indique que les éléments sont cliquables */
         }
 
-        .gallery img {
-            width: 30%; /* Consistent size for all images */
-            margin-bottom: 20px;
+        .carousel-item {
+            flex: 0 0 100%; /* Chaque item prend 100% de la largeur du carousel */
         }
 
-        @media (max-width: 600px) {
-            .gallery img {
-                width: 100%;
-            }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="zargha_site.jpg" class="header-image">
-    </header>
-    <div class="content">
-        <h1>Max Zargha</h1>
-        <p>Artiste franco-iranien diplômé de l’Université Paris 8, explorant la dualité du monde à travers le surréalisme.</p>
+    <!-- En-tête de la page avec image -->
+    <img src="zargha site.jpg" class="header-image" alt="En-tête Max Zargha">
+
+    <!-- Carrousel d'images -->
+    <div class="carousel" onclick="nextImage()">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-item">
+                <img src="Colonel.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="L'Autel.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="Le Chirurgien.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="Surréalisme.jpg" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="Tristesse.jpg" alt="Image 5">
+            </div>
+        </div>
     </div>
-    <div class="gallery">
-        <img src="Colonel.jpg" alt="Colonel">
-        <img src="L'Autel.jpg" alt="L'Autel">
-        <img src="Le Chirurgien.jpg" alt="Le Chirurgien">
-        <img src="Surréalisme.jpg" alt="Surréalisme">
-        <img src="Tristesse.jpg" alt="Tristesse">
-    </div>
+
+    <script>
+        var currentIndex = 0;
+        function nextImage() {
+            var container = document.getElementById("carouselContainer");
+            var totalItems = container.children.length;
+            currentIndex = (currentIndex + 1) % totalItems; // Cela permet de boucler le carrousel
+            var newTranslateValue = -100 * currentIndex;
+            container.style.transform = `translateX(${newTranslateValue}%)`;
+        }
+    </script>
 </body>
 </html>
+
