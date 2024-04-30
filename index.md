@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<img src="zargha site.jpg">
 
 
 [Link to another page](./another-page.html).
