@@ -65,19 +65,19 @@ Max Zargha est un artiste franco-iranien diplômé de l’Université Paris 8 da
     <div class="carousel" onclick="nextImage()">
         <div class="carousel-container" id="carouselContainer">
             <div class="carousel-item">
-                <img src="image1.jpg" alt="Image 1">
+                <img src="Colonel.jpg" alt="Image 1">
             </div>
             <div class="carousel-item">
-                <img src="image2.jpg" alt="Image 2">
+                <img src="L'Autel.jpg" alt="Image 2">
             </div>
             <div class="carousel-item">
-                <img src="image3.jpg" alt="Image 3">
+                <img src="Le Chirurgien.jpg" alt="Image 3">
             </div>
             <div class="carousel-item">
-                <img src="image4.jpg" alt="Image 4">
+                <img src="Surréalisme.jpg" alt="Image 4">
             </div>
             <div class="carousel-item">
-                <img src="image5.jpg" alt="Image 5">
+                <img src="Tristesse.jpg" alt="Image 5">
             </div>
         </div>
     </div>
