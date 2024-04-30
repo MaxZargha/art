@@ -10,7 +10,7 @@
             margin: 0 auto; /* Centre l'image horizontalement */
             max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
             height: auto; /* Maintient le ratio de l'image */
-            width: 50%; /* Réduit la taille de l'image à 50% de sa largeur originale */
+            width: 30%; /* Réduit la taille de l'image à 50% de sa largeur originale */
         }
     </style>
 </head>
