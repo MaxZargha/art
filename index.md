@@ -4,103 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Max Zargha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Nunito', sans-serif; /* Utilisation d'une police plus moderne */
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background-color: #f0f0f0;
             color: #333;
         }
 
         header {
-            background: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 10px 0;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .header-image {
-            max-width: 180px; /* Taille plus appropriée pour l'en-tête */
+            width: 150px; /* Adjusted image size for a better fit */
             height: auto;
+            margin: 0 auto; /* Centering the image horizontally */
         }
 
-        .carousel {
-            width: 80%;
-            overflow: hidden;
-            margin: 50px auto;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease;
-            will-change: transform;
-        }
-
-        .carousel-item {
-            flex: 0 0 100%;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        #gallery h2 {
+        .content {
+            padding: 20px;
             text-align: center;
-            margin: 40px 0;
+        }
+
+        .content h1 {
+            color: #2c3e50;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 30%; /* Consistent size for all images */
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .gallery img {
+                width: 100%;
+            }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const container = document.getElementById("carouselContainer");
-            let currentIndex = 0;
-
-            function nextImage() {
-                const totalItems = container.children.length;
-                currentIndex = (currentIndex + 1) % totalItems;
-                container.style.transform = `translateX(-${100 * currentIndex}%)`;
-            }
-
-            container.addEventListener('click', nextImage);
-        });
-    </script>
 </head>
 <body>
     <header>
-        <img src="zargha_site.jpg" alt="Logo de Max Zargha" class="header-image">
+        <img src="zargha_site.jpg" alt="Max Zargha Logo" class="header-image">
     </header>
-
-    <section id="bio">
+    <div class="content">
         <h1>Max Zargha</h1>
-        <p>Artiste franco-iranien diplômé de l’Université Paris 8 dans le domaine des arts. À travers ses collages, Max cherche à intriguer, politiser, et illustrer la dualité du monde et des inégalités sociologiques, tout en explorant les énergies subtiles de l’être humain inspiré par le surréalisme.</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Galerie</h2>
-        <div class="carousel">
-            <div class="carousel-container" id="carouselContainer">
-                <div class="carousel-item">
-                    <img src="Colonel.jpg" alt="Colonel">
-                </div>
-                <div class="carousel-item">
-                    <img src="L'Autel.jpg" alt="L'Autel">
-                </div>
-                <div class="carousel-item">
-                    <img src="Le Chirurgien.jpg" alt="Le Chirurgien">
-                </div>
-                <div class="carousel-item">
-                    <img src="Surréalisme.jpg" alt="Surréalisme">
-                </div>
-                <div class="carousel-item">
-                    <img src="Tristesse.jpg" alt="Tristesse">
-                </div>
-            </div>
-        </div>
-    </section>
+        <p>Artiste franco-iranien diplômé de l’Université Paris 8, explorant la dualité du monde à travers le surréalisme.</p>
+    </div>
+    <div class="gallery">
+        <img src="Colonel.jpg" alt="Colonel">
+        <img src="L'Autel.jpg" alt="L'Autel">
+        <img src="Le Chirurgien.jpg" alt="Le Chirurgien">
+        <img src="Surréalisme.jpg" alt="Surréalisme">
+        <img src="Tristesse.jpg" alt="Tristesse">
+    </div>
 </body>
 </html>
