@@ -7,13 +7,10 @@ layout: default
 
 [Link to another page](./another-page.html).
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # Bio
 
-Max Zargha estun artiste franco-iranien diplômé de l’Université Paris 8 dans le domaine des arts. À travers ses collages, plusieurs intentions se manifestent : Celle de vouloir intriguer le spectateur jusqu'à esquisser un sourire sur son visage. Il lui arrive également de vouloir politiser son œuvre avec une conscience moralisatrice ; il aime aussi montrer la dualité de notre monde ainsi que nos propres inégalités sociologiques. Lorsqu'il laisse parler son inspiration sur tablette graphique, il n’a de cesse de découvrir de nouvelles techniques pour tenter de mettre en visuel les énergies subtiles et inconscientes de l’être humain. Fortement inspiré par les surréalistes, il illustre en globalité des êtres vivants, avec pour idée fixe de représenter leurs spectres énergétiques en liquéfaction.
+Max Zargha est un artiste franco-iranien diplômé de l’Université Paris 8 dans le domaine des arts. À travers ses collages, plusieurs intentions se manifestent : Celle de vouloir intriguer le spectateur jusqu'à esquisser un sourire sur son visage. Il lui arrive également de vouloir politiser son œuvre avec une conscience moralisatrice ; il aime aussi montrer la dualité de notre monde ainsi que nos propres inégalités sociologiques. Lorsqu'il laisse parler son inspiration sur tablette graphique, il n’a de cesse de découvrir de nouvelles techniques pour tenter de mettre en visuel les énergies subtiles et inconscientes de l’être humain. Fortement inspiré par les surréalistes, il illustre en globalité des êtres vivants, avec pour idée fixe de représenter leurs spectres énergétiques en liquéfaction.
 
 ## Header 2
 
