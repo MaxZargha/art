@@ -62,7 +62,7 @@
 </head>
 <body>
     <header>
-        <img src="zargha_site.jpg" alt="Max Zargha Logo" class="header-image">
+        <img src="zargha_site.jpg" class="header-image">
     </header>
     <div class="content">
         <h1>Max Zargha</h1>
