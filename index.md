@@ -51,12 +51,12 @@ Max Zargha est un artiste franco-iranien diplômé de l’Université Paris 8 da
         }
 
         .carousel-item {
-            flex: 0 0 100%; /* Each item is 100% of carousel width */
+            flex: 100%; /* Each item is 100% of carousel width */
         }
 
         .carousel-item img {
-            width: 100%;
-            height: auto;
+            width: 50%;
+            height: 50%;
             display: block;
         }
     </style>
