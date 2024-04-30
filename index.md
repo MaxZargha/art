@@ -29,44 +29,75 @@
 Max Zargha est un artiste franco-iranien diplômé de l’Université Paris 8 dans le domaine des arts. À travers ses collages, plusieurs intentions se manifestent : Celle de vouloir intriguer le spectateur jusqu'à esquisser un sourire sur son visage. Il lui arrive également de vouloir politiser son œuvre avec une conscience moralisatrice ; il aime aussi montrer la dualité de notre monde ainsi que nos propres inégalités sociologiques. Lorsqu'il laisse parler son inspiration sur tablette graphique, il n’a de cesse de découvrir de nouvelles techniques pour tenter de mettre en visuel les énergies subtiles et inconscientes de l’être humain. Fortement inspiré par les surréalistes, il illustre en globalité des êtres vivants, avec pour idée fixe de représenter leurs spectres énergétiques en liquéfaction.
 
 ## Galerie
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Galerie d'images défilante</title>
+    <title>Carrousel Interactif</title>
     <style>
         .carousel {
-            width: 30%; /* Largeur du carrousel */
-            overflow: hidden; /* Cache les images non visibles */
-            margin: 20px auto; /* Centre le carrousel */
+            width: 60%;
+            overflow: hidden;
+            margin: 50px auto;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .carousel-container {
-            display: flex; /* Affichage en ligne des images */
-            width: 500%; /* 5 fois la largeur du carrousel pour contenir toutes les images */
-            animation: slide 20s infinite; /* Animation définie ci-dessous */
+            display: flex;
+            width: calc(100% * 5); /* Assume 5 images */
+            transition: transform 1s ease;
+            cursor: pointer; /* Indicate clickable items */
         }
 
         .carousel-item {
-            width: 20%; /* Chaque image utilise 20% de l'espace (pour 5 images) */
-            flex-shrink: 0; /* Empêche le redimensionnement des images */
+            flex: 0 0 100%; /* Each item is 100% of carousel width */
         }
 
         .carousel-item img {
-            width: 50%; /* Adapte l'image à la largeur disponible */
-            height: auto; /* Maintient le ratio */
-        }
-
-        /* Keyframes pour l'animation de défilement */
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            45% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
+</head>
+<body>
+    <div class="carousel" onclick="nextImage()">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-item">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="image4.jpg" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="image5.jpg" alt="Image 5">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var currentIndex = 0;
+        function nextImage() {
+            var container = document.getElementById("carouselContainer");
+            var totalItems = container.children.length;
+            currentIndex++;
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            }
+            var newTranslateValue = -100 * currentIndex;
+            container.style.transform = `translateX(${newTranslateValue}%)`;
+        }
+    </script>
+</body>
+</html>
+
 </head>
 <body>
     <div class="carousel">
