@@ -28,11 +28,73 @@
 
 Max Zargha est un artiste franco-iranien diplômé de l’Université Paris 8 dans le domaine des arts. À travers ses collages, plusieurs intentions se manifestent : Celle de vouloir intriguer le spectateur jusqu'à esquisser un sourire sur son visage. Il lui arrive également de vouloir politiser son œuvre avec une conscience moralisatrice ; il aime aussi montrer la dualité de notre monde ainsi que nos propres inégalités sociologiques. Lorsqu'il laisse parler son inspiration sur tablette graphique, il n’a de cesse de découvrir de nouvelles techniques pour tenter de mettre en visuel les énergies subtiles et inconscientes de l’être humain. Fortement inspiré par les surréalistes, il illustre en globalité des êtres vivants, avec pour idée fixe de représenter leurs spectres énergétiques en liquéfaction.
 
-## Header 2
+## Galerie
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie d'images défilante</title>
+    <style>
+        .carousel {
+            width: 80%; /* Largeur du carrousel */
+            overflow: hidden; /* Cache les images non visibles */
+            margin: 20px auto; /* Centre le carrousel */
+        }
+
+        .carousel-container {
+            display: flex; /* Affichage en ligne des images */
+            width: 500%; /* 5 fois la largeur du carrousel pour contenir toutes les images */
+            animation: slide 20s infinite; /* Animation définie ci-dessous */
+        }
+
+        .carousel-item {
+            width: 20%; /* Chaque image utilise 20% de l'espace (pour 5 images) */
+            flex-shrink: 0; /* Empêche le redimensionnement des images */
+        }
+
+        .carousel-item img {
+            width: 100%; /* Adapte l'image à la largeur disponible */
+            height: auto; /* Maintient le ratio */
+        }
+
+        /* Keyframes pour l'animation de défilement */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            95% { transform: translateX(-300%); }
+            100% { transform: translateX(-400%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <img src="Colonel.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="L'Autel.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="Le Chirurgien.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="Surréalisme.jpg" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="Tristesse.jpg" alt="Image 5">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 
 ### Header 3
 
