@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie de Max Zargha</title>
     <style>
+        /* Réinitialiser les marges et les paddings */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
         /* Style pour l'image d'en-tête */
         .header-image {
             display: block;
             margin: 0 auto; /* Centre l'image horizontalement */
             max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
             height: auto; /* Maintient le ratio de l'image */
-            width: 100%; /* Utilise 100% de la largeur de l'écran */
+            width: 50%; /* Réduit la taille de l'image à 50% de sa largeur originale */
         }
 
         /* Styles pour le carrousel */
         .carousel {
             width: 60%;
             overflow: hidden;
-            margin: 50px auto;
+            margin: 20px auto; /* Ajustement de la marge pour une meilleure présentation */
             position: relative;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -77,4 +83,3 @@
     </script>
 </body>
 </html>
-
